@@ -35,10 +35,22 @@ const defaultMovies: Movie[] = [
 ];
 
 router.get("/", (req, res) => {
-  if(!req.query["minimum-duration"]){
+  const minimumDurationQuery = req.query["minimum-duration"];
+  const titleQuery = req.query.title;
+
+  if (!minimumDurationQuery && !titleQuery) {
     return res.json(defaultMovies);
   }
-  const minimum_duration = Number(req.query["minimum-duration"]);
+
+  if (typeof titleQuery === "string") {
+    const titlePrefix = titleQuery.toLowerCase();
+    const filteredMovies = defaultMovies.filter((movie) => {
+      return movie.title.toLowerCase().startsWith(titlePrefix);
+    });
+    return res.json(filteredMovies);
+  }
+
+  const minimum_duration = Number(minimumDurationQuery);
   const filteredMovies = defaultMovies.filter((movie) => {
     return movie.duration <= minimum_duration;
   });
@@ -48,7 +60,7 @@ router.get("/", (req, res) => {
 router.get("/:id", (req, res) => {
   const id = Number(req.params.id);
   const movie = defaultMovies.find((movie) => movie.id === id);
-  if(!movie) {
+  if (!movie) {
     return res.sendStatus(404);
   }
   return res.json(movie);
@@ -78,17 +90,17 @@ router.post("/", (req, res) => {
   ) {
     return res.sendStatus(400);
   }
-  if(body.duration <= 0){
-    return res.status(400).json({ error: "Wrong minimum duration"});
+  if (body.duration <= 0) {
+    return res.status(400).json({ error: "Wrong minimum duration" });
   }
-  if(body.budget <= 0){
-    return res.status(400).json({ error: "Wrong minimum budget"});
+  if (body.budget <= 0) {
+    return res.status(400).json({ error: "Wrong minimum budget" });
   }
 
   const { title, director, duration, budget, description, imageUrl } = body as NewMovie;
 
   const nextId =
-  defaultMovies.reduce((maxId, movie) => (movie.id > maxId ? movie.id : maxId), 0) + 1;
+    defaultMovies.reduce((maxId, movie) => (movie.id > maxId ? movie.id : maxId), 0) + 1;
 
   const NewMovie: Movie = {
     id: nextId,

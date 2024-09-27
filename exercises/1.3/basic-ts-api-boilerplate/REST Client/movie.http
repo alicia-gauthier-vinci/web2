@@ -20,3 +20,6 @@ Content-Type: application/json
     "description": "A paraplegic Marine on an alien planet becomes torn between following his orders and protecting the world he feels is his home.",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/d6/Avatar_%282009_film%29_poster.jpg"
 }
+
+### Read all movies which the name starts with I
+GET {{baseUrl}}/movies/?title=i
