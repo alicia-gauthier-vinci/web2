@@ -1,0 +1,38 @@
+### Read all movies with File variable
+@baseUrl = http://localhost:3000
+GET {{baseUrl}}/movies
+
+### Read all movies shorter or equal to 148min 
+GET {{baseUrl}}/movies/?minimum-duration=148
+
+### Read a single movie
+GET {{baseUrl}}/movies/2
+
+### Create a movie
+POST {{baseUrl}}/movies
+Content-Type: application/json
+
+{
+    "title": "Avatar2",
+    "director": "James Cameron",
+    "duration": 162,
+    "budget": 237000000,
+    "description": "A paraplegic Marine on an alien planet becomes torn between following his orders and protecting the world he feels is his home.",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/d6/Avatar_%282009_film%29_poster.jpg"
+}
+
+### Read all movies which the name starts with 
+GET {{baseUrl}}/movies/?title=o
+
+### Delete a movie
+DELETE  {{baseUrl}}/movies/5
+
+### Modify a movie
+PATCH  {{baseUrl}}/movies/1
+Content-Type: application/json
+
+{
+    "title": "SNK",
+    "director": "Uzumaki",
+    "duration": 120
+}
