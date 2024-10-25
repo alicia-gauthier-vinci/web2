@@ -17,7 +17,10 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-       <ClickCounter title="Click how many times you want !" message="You are a master in the art of clicking !"/>
+        <ClickCounter
+          title="Click how many times you want !"
+          messageSouris='Please click on me now !'
+          message10click="You are a master in the art of clicking !" />
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
