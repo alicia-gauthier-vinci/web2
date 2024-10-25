@@ -1,13 +1,9 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import reactLogo from '../../assets/react.svg'
+import viteLogo from '../../../public/vite.svg'
 import './App.css'
+import ClickCounter from '../ClickCounter'
 
 function App() {
-  const ClickCounter = () => {
-    setCount((count) => count + 1);
-  }
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -21,9 +17,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={ClickCounter}>
-          count is {count}
-        </button>
+       <ClickCounter title="Click how many times you want !" message="You are a master in the art of clicking !"/>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
