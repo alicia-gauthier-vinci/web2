@@ -46,7 +46,7 @@ function App() {
   };
 
   return (
-    <Box>
+    <Box sx={{ backgroundColor: "primary.light" }}>
       <MovieList movies={movies} />
       <NewMovie addMovie={addMovie} />
     </Box>

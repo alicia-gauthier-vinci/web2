@@ -1,18 +1,19 @@
 import { Movie } from "../types";
-import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
+import { Box, Card, CardContent, CardMedia, Typography, useTheme } from "@mui/material";
 
 interface MovieProps {
   movies: Movie[];
 }
 
 const MovieList = ({ movies }: MovieProps) => {
+  const theme = useTheme();
   return (
     <Box
       sx={{
         display: 'flex',
         flexDirection: 'column',
         gap: 2,
-        marginBottom:'2rem'
+        marginBottom: '2rem'
       }}>
       {movies.map((movie) => (
         <Card
@@ -21,6 +22,7 @@ const MovieList = ({ movies }: MovieProps) => {
             border: '1px solid #ddd',
             borderRadius: 5,
             padding: 1,
+            "&.MuiCard-root": { backgroundColor: theme.palette.secondary.main }
           }}>
           < CardMedia
             component='img'
