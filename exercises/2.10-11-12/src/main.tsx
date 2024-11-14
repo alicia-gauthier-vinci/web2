@@ -7,7 +7,9 @@ import App from './components/App/App.tsx'
 import HomePage from './components/pages/HomePage.tsx';
 import CinemaPage from "./components/pages/Cinema.tsx";
 import MovieListPage from "./components/pages/MovieListPage.tsx";
-
+/** crées les routes et regroupe les pages en un children
+ * on appelera alors un outlet dans l'app.tsx
+ */
 const router = createBrowserRouter([
   {
     path: "/",

@@ -1,6 +1,6 @@
-import Header from '../Header';
-import Footer from '../Footer';
-import NavBar from '../Navbar';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
+import NavBar from '../NavBar/Navbar';
 import { Outlet } from 'react-router-dom';
 import './App.css'
 
@@ -22,5 +22,6 @@ function App() {
     </>
   )
 }
-
+/*comment choisir le props parent et le child ? 
+on aurait pu l'image en child et le titre en parent ? */
 export default App

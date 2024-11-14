@@ -1,5 +1,8 @@
 import { SyntheticEvent, useState } from "react";
-import { Movie } from "../types";
+import { Movie } from "../../types";
+/** composant qui ajoute un nouveau movie à la liste de movies
+ * il prend en paramètre une méthode addMovie déclarée dans l'app MovieListPage. 
+*/
 
 interface NewMovieProps {
   addMovie: (movie: Movie) => void;

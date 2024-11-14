@@ -1,6 +1,7 @@
-import { Movie } from "../types";
+import { Movie } from "../../types";
 import "./MovieCard.css"
-
+/* composant qui prend un tableau de movies
+  il permet d'afficher chaque movie avec ses infos dans un card */
 interface MovieProps {
   movies: Movie[];
 }

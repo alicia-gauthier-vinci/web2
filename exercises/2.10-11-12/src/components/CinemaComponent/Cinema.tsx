@@ -1,5 +1,6 @@
-import { Movie } from "../types";
+import { Movie } from "../../types";
 import MovieList from "./MovieList";
+//un Cinema prend un nom et une liste de films
 
 interface CinemaProps {
   name: string;

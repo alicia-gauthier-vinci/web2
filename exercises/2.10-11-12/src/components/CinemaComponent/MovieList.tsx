@@ -1,10 +1,12 @@
 import { useState } from "react";
-import { Movie } from "../types";
-
+import { Movie } from "../../types";
+/*composant qui prend une liste de films 
+  et agis sur chaque film
+  ce composant est util pour le composant Cinema*/
 interface MovieListViewProps {
   movies: Movie[];
 }
-
+/*??? Pourquoi quand on clique sur un films, toutes les descriptions se mettent ???*/
 const MovieList = ({ movies }: MovieListViewProps) => {
   const [descriptionVisible, setDescriptionVisible] = useState(false);
   return (

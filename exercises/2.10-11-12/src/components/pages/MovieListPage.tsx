@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { Movie } from '../../types';
-import MovieCard from '../MovieCard'
-import NewMovie from '../NewMovie';
+import MovieCard from '../MyMoviesComponent/MovieCard'
+import NewMovie from '../MyMoviesComponent/NewMovie';
+/* index.tsx du composant MovieCard 
+  le composant prends une liste de movies et un setter pour pouvoir ajouter un movie*/
 
 function App() {
 

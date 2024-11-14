@@ -1,6 +1,7 @@
 import { Movie } from "../../types";
-import Cinema from "../Cinema";
+import Cinema from "../CinemaComponent/Cinema";
 import PageTitle from "../PageTitle";
+//ca c'est comme l'index.tsx du composant cinema ? 
 
 const CinemaPage = () => {
   const pageTitle = "Informations sur les films dans les cinémas";
