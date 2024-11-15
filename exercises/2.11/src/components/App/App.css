@@ -1,0 +1,12 @@
+#root {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.page-content {
+  min-height: 100vh;
+  padding: 1rem;
+  
+}
