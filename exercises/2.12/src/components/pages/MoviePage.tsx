@@ -17,7 +17,7 @@ const MoviePage = () => {
       <p>{movie.description}</p>
       <p>Duration : {movie.duration}</p>
       <p> Budget du film : {movie.budget}</p>
-      {movie.image}
+      <img src={movie.image} width={400} />
     </div>
   );
 };

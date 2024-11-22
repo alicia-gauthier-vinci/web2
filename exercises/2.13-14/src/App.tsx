@@ -15,6 +15,7 @@ function App() {
           );
         return response.json();
       })
+      //récupère le body dans setJoke, on récupère la catégorie et la blague dans la vue
       .then((result) => setJoke(result))
       .catch((err) => {
         console.error("HomePage::error: ", err);
