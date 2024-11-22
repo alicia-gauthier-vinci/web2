@@ -22,9 +22,10 @@ function App() {
     </>
   )
 }
-/** 
- * je ne comprends pas de quelle manière l'api détecte le fait 
- * qu'elle doive rendre différents chien chaque fois, est ce grace aux clés ?
-*/ 
 
 export default App
+
+/** 
+ * la clé permet à react de savoir qu'il y a un changemnet, sans elle, 
+ * la photo du chien ne changerait pas 
+*/ 

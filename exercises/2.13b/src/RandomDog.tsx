@@ -29,11 +29,4 @@ const RandomDog = () => {
 
   );
 }
-/**
- * je ne comprends pas cette formulation dans la correction 
- *  setDog({
-          message: data.message ?? "No dog found",
-          status: data.status ?? "Error",
-        });
- */
 export default RandomDog;
