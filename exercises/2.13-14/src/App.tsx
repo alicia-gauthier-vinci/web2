@@ -22,6 +22,7 @@ function App() {
           console.error("HomePage::error: ", err);
         });
     };
+    
 
     fetchJoke();
     const interval = setInterval(fetchJoke, 5000);
