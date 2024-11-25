@@ -7,6 +7,8 @@ const RandomDog = () => {
 
   useEffect(() => {
     fetchDogImage();
+    const interval = setInterval(fetchDogImage,5000);
+    return () => clearInterval(interval);
   }, []);
 
   const fetchDogImage = async () => {
